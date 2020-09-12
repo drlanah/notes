@@ -30,7 +30,10 @@
 
 ### Usage
 
--
+- Type "note title" and "note text", click on "save" icon.
+- Saved notes will appear on left side.
+- There is a "delete" icon to delete notes.
+- Pencil icon on upper right side will create a new note.
 
 ### License
 
