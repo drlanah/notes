@@ -26,7 +26,7 @@
 - npm i
 - npm start
 
-- Heroku link:
+- Heroku link: https://protected-peak-69530.herokuapp.com/
 
 ### Usage
 

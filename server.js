@@ -25,8 +25,8 @@ app.get("/api/notes", function (req, res) {
 // POST
 app.post("/api/notes", (req, res) => {
   const noteArray = JSON.parse(fs.readFileSync("db/db.json"));
-  const newNote = req.body; //posted data
-  newNote.id = new Date(); //give ID for delete
+  const newNote = req.body;
+  newNote.id = new Date();
   console.log(newNote);
   noteArray.push(newNote);
   fs.writeFileSync("db/db.json", JSON.stringify(noteArray));
@@ -37,8 +37,8 @@ app.post("/api/notes", (req, res) => {
 app.delete("/api/notes/:id", function (req, res) {
   const noteArray = JSON.parse(fs.readFileSync("db/db.json"));
   console.log(req.params.id + "<= was deleted");
-  var newNoteArray = noteArray.filter((note) => note.id !== req.params.id); //filter with target id
-  fs.writeFileSync("db/db.json", JSON.stringify(newNoteArray)); //rewrite
+  var newNoteArray = noteArray.filter((note) => note.id !== req.params.id);
+  fs.writeFileSync("db/db.json", JSON.stringify(newNoteArray));
   return res.json(newNoteArray);
 });
 
